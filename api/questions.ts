@@ -1,5 +1,5 @@
 import * as express from 'express';
-import Question from '../models/question';
+import Question from '../models/questions';
 
 let router = express.Router();
 
