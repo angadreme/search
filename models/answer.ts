@@ -1,15 +1,15 @@
 import * as mongoose from 'mongoose';
 
 interface Answer extends mongoose.Document{
-  aDate: string;
-  questionId: string;
-  aContent: string;
-  userId: string;
-  usefulCount: number;
-  bestAnswer: boolean;
+  aDate;
+  questionId;
+  aContent;
+  userId;
+  usefulCount;
+  bestAnswer;
 }
 
-let AnswerSchema = new mongoose.Schema({
+let answerSchema = new mongoose.Schema({
   aDate: {
     type: String,
     required: true
@@ -30,4 +30,4 @@ let AnswerSchema = new mongoose.Schema({
   bestAnswer: Boolean
 });
 
-export default mongoose.model<Answer>('Answer', AnswerSchema);
+export default mongoose.model<Answer>('Answer', answerSchema);
