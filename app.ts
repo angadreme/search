@@ -10,6 +10,7 @@ require('dotenv').config({silent: true});
 
 import questions from './api/questions';
 import answers from './api/answers';
+import comments from './api/comments';
 
 mongoose.connect(process.env.CONNECTION_STRING)
   .then(() => console.log('connection established'))
@@ -40,6 +41,7 @@ app.use('/api', express.static(path.join(__dirname, 'api')));
 
 app.use('/api/v1/questions', questions);
 app.use('/api/v1/answers', answers);
+app.use('/api/v1/comments', comments);
 
 
 // redirect 404 to home for the sake of AngularJS client-side routes
